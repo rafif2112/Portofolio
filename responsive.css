@@ -1,0 +1,161 @@
+@media screen and (max-width:450px) {
+    
+    .header-atas {
+        gap: 100px;
+    }
+    .header-left {
+        font-size: 15px;
+    }
+    .navbar .hidden {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar ul {
+        flex-direction: column;
+        backdrop-filter: blur(20px);
+        background-color: rgba(0, 0, 0, 0.423);
+        margin-top: 73px;
+        position: fixed;
+        height: 250px;
+        width: 200px;
+    }
+    .menu-btn{
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .menu-btn:hover {
+        transition: all 0.3s;
+    }
+
+    /* section home */
+    .home{
+        justify-content: center;
+        gap: 10px;
+        height: 650px;
+    }
+    .home-sepuh {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home .left {
+        margin-top: 60px;
+        margin-right: 0;
+    }
+    .home .left .text-1, .text-3{
+        padding: 10px 0 10px 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .home .left .text-2 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .home .right img {
+        width: 300px;
+        margin-right: 0;
+    }
+
+    /* section about */
+
+    .about {
+        height: 230px;
+        margin-top: 100px;
+    }
+    .about .title {
+        font-size: 15px;
+    }
+    .about .text {
+        font-size: 12px;
+        width: 80%;
+        margin-top: 70px;
+    }
+
+    /* section skills */
+
+    .skill {
+        height: 950px;
+    }
+    .skill .title-1 {
+        font-size: 15px;
+    }
+
+    /* section project */
+
+    .project{
+        height: 1900px;
+    }
+    .project .title-1 {
+        font-size: 16px;
+    }
+    .projeect .big-box {
+        gap: 10px;
+    }
+    .project .box {
+        margin: 0px 0px 0px 0px;
+    }
+
+    /* section services */
+    .services .title-3 {
+        font-size: 25px;
+        padding-bottom: 40px;
+    }
+    .services .serv-content .card2 {
+        margin-bottom: 20px;
+        width: 130px;
+        height: 300px;
+    }
+    .serv-content {
+        margin: 20px 20px 20px 20px;
+    }
+    .serv-content:hover {
+        margin: 20px 20px 20px 20px;
+    }
+    .services .serv-content .card2 .text {
+        font-size: 17px;
+    }
+    .serv-content .card2 .kalimat {
+        font-size: 14px;
+    }
+    /* section contact */
+    
+    .contact {
+        height: 1150px;
+    }
+    .contact .title-2 {
+        font-size: 15px;
+    }
+    .contact-content {
+        display: block;
+    }
+    .contact .nama, .imel {
+        width: 145px;
+    }
+    .contact .subjek {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .header-atas {
+        gap: 50px;
+    }
+    .navbar ul {
+        margin-left: -50px;
+    }
+    .services .serv-content .card2 {
+        width: 110px;
+        height: 300px;
+    }
+    .serv-content {
+        margin: 20px 15px 20px 15px;
+    }
+    .serv-content:hover {
+        margin: 20px 15px 20px 15px;
+    }
+    .contact-content {
+        margin-left: -20px;
+    }
+}
