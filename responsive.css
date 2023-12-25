@@ -2,9 +2,13 @@
     
     .header-atas {
         gap: 100px;
+        height: 70px;
     }
     .header-left {
-        font-size: 15px;
+        margin-top: 14px;
+    }
+    .header-left h1 {
+        font-size: 25px;
     }
     .navbar .hidden {
         display: none;
@@ -14,16 +18,21 @@
         flex-direction: column;
         backdrop-filter: blur(20px);
         background-color: rgba(0, 0, 0, 0.423);
-        margin-top: 73px;
+        margin-top: 53px;
+        margin-left: -10px;
         position: fixed;
-        height: 250px;
+        height: 240px;
         width: 200px;
+        border-radius: 0 0 15px 15px;
+    }
+    .navbar ul li a {
+        font-size: 17px;
     }
     .menu-btn{
         display: flex;
         align-items: center;
         color: #ffffff;
-        font-size: 30px;
+        font-size: 25px;
         cursor: pointer;
     }
     .menu-btn:hover {
@@ -104,8 +113,8 @@
     }
     .services .serv-content .card2 {
         margin-bottom: 20px;
-        width: 130px;
-        height: 300px;
+        width: 125px;
+        height: 290px;
     }
     .serv-content {
         margin: 20px 20px 20px 20px;
@@ -136,26 +145,63 @@
     .contact .subjek {
         width: 300px;
     }
+    .contact .footer .wrapper .icon {
+        margin: 0 10px;
+    }
+    .contact .footer p {
+        font-size: 12px;
+    }
+    .contact .footer .wrapper .icon span{
+        height: 50px;
+        width: 50px;
+    }
+    .contact .footer .wrapper .icon i{
+        color: #fff;
+        font-size: 25px;
+        line-height: 50px;
+    }
 }
 
 @media screen and (max-width: 390px) {
     .header-atas {
-        gap: 50px;
+        gap: 70px;
     }
+    
     .navbar ul {
-        margin-left: -50px;
+        margin-left: -30px;
     }
     .services .serv-content .card2 {
-        width: 110px;
-        height: 300px;
+        width: 100px;
+        height: 290px;
+    }
+    .services .serv-content .card2 .text {
+        font-size: 15px;
+    }
+    .serv-content .card2 .kalimat {
+        font-size: 12px;
     }
     .serv-content {
-        margin: 20px 15px 20px 15px;
+        margin: 20px 13px 20px 13px;
     }
     .serv-content:hover {
-        margin: 20px 15px 20px 15px;
+        margin: 20px 13px 20px 13px;
     }
     .contact-content {
-        margin-left: -20px;
+        margin-left: -30px;
+    }
+    .contact .footer .wrapper .icon {
+        margin: 0 10px;
+    }
+    .contact .footer p {
+        font-size: 12px;
+    }
+    .contact .footer .wrapper .icon span{
+        height: 50px;
+        width: 50px;
+    }
+    .contact .footer .wrapper .icon i{
+        color: #fff;
+        font-size: 25px;
+        line-height: 50px;
     }
 }
