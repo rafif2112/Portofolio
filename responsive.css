@@ -1,5 +1,7 @@
 @media screen and (max-width:450px) {
-    
+    html {
+        scroll-behavior: smooth;
+    }
     .header-atas {
         gap: 100px;
         height: 70px;
@@ -113,20 +115,20 @@
     }
     .services .serv-content .card2 {
         margin-bottom: 20px;
-        width: 125px;
-        height: 290px;
+        width: 120px;
+        height: 280px;
     }
     .serv-content {
-        margin: 20px 20px 20px 20px;
+        margin: 20px 15px 20px 15px;
     }
     .serv-content:hover {
-        margin: 20px 20px 20px 20px;
+        margin: 20px 15px 20px 15px;
     }
     .services .serv-content .card2 .text {
-        font-size: 17px;
+        font-size: 16px;
     }
     .serv-content .card2 .kalimat {
-        font-size: 14px;
+        font-size: 13px;
     }
     /* section contact */
     
