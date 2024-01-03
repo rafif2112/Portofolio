@@ -122,7 +122,7 @@
     }
     .serv-content {
         justify-content: center;
-        gap :15px;
+        gap :10px;
         margin: 20px 5px 20px 5px;
     }
     .serv-content:hover {
@@ -171,8 +171,6 @@
         line-height: 50px;
     }
 }
-
-
 
 
 
@@ -298,7 +296,7 @@
     }
     .serv-content {
         justify-content: center;
-        gap: 15px;
+        gap: 7px;
         margin: 20px 15px 20px 15px;
     }
     .serv-content:hover {
@@ -317,6 +315,13 @@
     }
     .contact .title-2 {
         font-size: 15px;
+    }
+    .contact-contact {
+        display: flex;
+        justify-content: center;
+    }
+    .contact-sepuh {
+        margin-left: -10px;
     }
     .contact-content {
         display: block;
