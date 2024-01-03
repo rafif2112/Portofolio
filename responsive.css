@@ -1,4 +1,182 @@
-@media screen and (max-width:450px) {
+@media screen and (max-width: 670px) {
+    html {
+        scroll-behavior: smooth;
+    }
+    .header-atas {
+        gap: 120px;
+        height: 80px;
+    }
+    .header-left {
+        margin-top: 14px;
+    }
+    .header-left h1 {
+        font-size: 30px;
+    }
+    .navbar .hidden {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar ul {
+        flex-direction: column;
+        backdrop-filter: blur(20px);
+        background-color: rgba(0, 0, 0, 0.423);
+        margin-top: 53px;
+        margin-left: -10px;
+        position: fixed;
+        height: 240px;
+        width: 200px;
+        border-radius: 0 0 15px 15px;
+    }
+    .navbar ul li a {
+        font-size: 17px;
+    }
+    .menu-btn{
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .menu-btn:hover {
+        transition: all 0.3s;
+    }
+
+
+    /* section home */
+    .home{
+        justify-content: center;
+        gap: 10px;
+        height: 650px;
+    }
+    .home-sepuh {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home .left {
+        margin-top: 60px;
+        margin-right: 0;
+    }
+    .home .left .text-1, .text-3{
+        padding: 10px 0 10px 0;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .home .left .text-2 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .home .right img {
+        width: 320px;
+        margin-right: 0;
+    }
+
+    /* section about */
+
+    .about {
+        height: 230px;
+        margin-top: 100px;
+    }
+    .about .title {
+        font-size: 15px;
+    }
+    .about .text {
+        font-size: 12px;
+        width: 80%;
+        margin-top: 70px;
+    }
+
+    /* section skills */
+
+    .skill {
+        height: 700px;
+    }
+    .skill .title-1 {
+        font-size: 20px;
+    }
+
+    /* section project */
+
+    .project{
+        height: 1900px;
+    }
+    .project .title-1 {
+        font-size: 20px;
+    }
+    .projeect .big-box {
+        gap: 10px;
+    }
+    .project .box {
+        margin: 0px 0px 0px 0px;
+    }
+
+    /* section services */
+
+    .services .title-3 {
+        font-size: 30px;
+        padding-bottom: 40px;
+    }
+    .services .serv-content .card2 {
+        margin-bottom: 20px;
+        width: 180px;
+        height: 280px;
+    }
+    .serv-content {
+        justify-content: center;
+        gap :15px;
+        margin: 20px 5px 20px 5px;
+    }
+    .serv-content:hover {
+        margin: 20px 5px 20px 5px;
+    }
+    .services .serv-content .card2 .text {
+        font-size: 16px;
+    }
+    .serv-content .card2 .kalimat {
+        font-size: 13px;
+    }
+
+    /* section contact */
+    
+    .contact {
+        height: 1150px;
+    }
+    .contact-sepuh {
+        margin-left: 40px;
+    }
+    .contact .title-2 {
+        font-size: 15px;
+    }
+    .contact-content {
+        display: block;
+    }
+    .contact .nama, .imel {
+        width: 170px;
+    }
+    .contact .subjek {
+        width: 350px;
+    }
+    .contact .footer .wrapper .icon {
+        margin: 0 10px;
+    }
+    .contact .footer p {
+        font-size: 12px;
+    }
+    .contact .footer .wrapper .icon span{
+        height: 50px;
+        width: 50px;
+    }
+    .contact .footer .wrapper .icon i{
+        color: #fff;
+        font-size: 25px;
+        line-height: 50px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:480px) {
     html {
         scroll-behavior: smooth;
     }
@@ -119,6 +297,8 @@
         height: 280px;
     }
     .serv-content {
+        justify-content: center;
+        gap: 15px;
         margin: 20px 15px 20px 15px;
     }
     .serv-content:hover {
@@ -163,6 +343,10 @@
         line-height: 50px;
     }
 }
+
+
+
+
 
 @media screen and (max-width: 390px) {
     .header-atas {
