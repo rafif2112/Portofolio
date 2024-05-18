@@ -1,6 +1,155 @@
+@media screen and (max-width: 1200px) {
+    .home .right img {
+        margin-top: 140px;
+        margin-right: -150px;
+        width: 400px;
+    }
+    .home .left {
+        margin-top: 200px;
+        margin-right: 50px;
+    }
+    .home .left .text-1, .text-3{
+        padding: 20px 0 20px 0;
+        font-size: 29px;
+    }
+    .home .left .text-2 {
+        font-size: 40px;
+    }
+    .home .left a {
+        padding: 10px;
+        height: 40px;
+        width: 200px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 930px) {
+    .home .right img {
+        margin-top: 170px;
+        margin-right: -130px;
+        width: 350px;
+    }
+    .home .left {
+        margin-top: 200px;
+        margin-right: 50px;
+    }
+    .home .left .text-1, .text-3{
+        padding: 20px 0 20px 0;
+        font-size: 25px;
+    }
+    .home .left .text-2 {
+        font-size: 35px;
+    }
+    .home .left a {
+        padding: 10px;
+        height: 40px;
+        width: 200px;
+        font-size: 20px;
+    }
+    /* section contact */
+    
+    .contact {
+        height: 1150px;
+    }
+    .contact-sepuh {
+        margin-left: 40px;
+    }
+    .contact-content {
+        display: block;
+    }
+    .contact .nama, .imel {
+        width: 320px;
+    }
+    .contact .subjek {
+        width: 650px;
+    }
+    .contact .footer .wrapper .icon {
+        margin: 0 10px;
+    }
+    .contact .footer p {
+        font-size: 12px;
+    }
+    .contact .footer .wrapper .icon span{
+        height: 50px;
+        width: 50px;
+    }
+    .contact .footer .wrapper .icon i{
+        color: #fff;
+        font-size: 25px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* section home */
+    .home{
+        justify-content: center;
+        gap: 10px;
+        height: 650px;
+    }
+    .home-sepuh {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home .left {
+        margin-top: 60px;
+        margin-right: 0;
+    }
+    .home .left .text-1, .text-3{
+        padding: 10px 0 10px 0;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .home .left .text-2 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .home .right img {
+        width: 320px;
+        margin-right: 0;
+    }
+    .about {
+        margin-top:100px;
+    }
+    /* section contact */
+    
+    .contact {
+        height: 1150px;
+    }
+    .contact-sepuh {
+        margin-left: 40px;
+    }
+    .contact-content {
+        display: block;
+    }
+    .contact .nama, .imel {
+        width: 260px;
+    }
+    .contact .subjek {
+        width: 530px;
+    }
+    .contact .footer .wrapper .icon {
+        margin: 0 10px;
+    }
+    .contact .footer p {
+        font-size: 12px;
+    }
+    .contact .footer .wrapper .icon span{
+        height: 50px;
+        width: 50px;
+    }
+    .contact .footer .wrapper .icon i{
+        color: #fff;
+        font-size: 25px;
+        line-height: 50px;
+    }
+}
+
 @media screen and (max-width: 670px) {
     html {
         scroll-behavior: smooth;
+    }
+    .title {
+        font-size: 15px;
     }
     .header-atas {
         gap: 120px;
@@ -20,7 +169,7 @@
         flex-direction: column;
         backdrop-filter: blur(20px);
         background-color: rgba(0, 0, 0, 0.423);
-        margin-top: 53px;
+        margin-top: 62px;
         margin-left: -10px;
         position: fixed;
         height: 240px;
@@ -34,7 +183,7 @@
         display: flex;
         align-items: center;
         color: #ffffff;
-        font-size: 25px;
+        font-size: 30px;
         cursor: pointer;
     }
     .menu-btn:hover {
@@ -76,7 +225,7 @@
         height: 230px;
         margin-top: 100px;
     }
-    .about .title {
+    .about .title-1 {
         font-size: 15px;
     }
     .about .text {
@@ -90,50 +239,20 @@
     .skill {
         height: 700px;
     }
-    .skill .title-1 {
-        font-size: 20px;
-    }
 
     /* section project */
 
     .project{
-        height: 1900px;
+        height: 900px;
     }
-    .project .title-1 {
-        font-size: 20px;
-    }
-    .projeect .big-box {
+
+    .project .big-box {
         gap: 10px;
     }
     .project .box {
         margin: 0px 0px 0px 0px;
     }
 
-    /* section services */
-
-    .services .title-3 {
-        font-size: 30px;
-        padding-bottom: 40px;
-    }
-    .services .serv-content .card2 {
-        margin-bottom: 20px;
-        width: 180px;
-        height: 280px;
-    }
-    .serv-content {
-        justify-content: center;
-        gap :10px;
-        margin: 20px 5px 20px 5px;
-    }
-    .serv-content:hover {
-        margin: 20px 5px 20px 5px;
-    }
-    .services .serv-content .card2 .text {
-        font-size: 16px;
-    }
-    .serv-content .card2 .kalimat {
-        font-size: 13px;
-    }
 
     /* section contact */
     
@@ -142,9 +261,6 @@
     }
     .contact-sepuh {
         margin-left: 40px;
-    }
-    .contact .title-2 {
-        font-size: 15px;
     }
     .contact-content {
         display: block;
@@ -172,18 +288,31 @@
     }
 }
 
+@media screen and (max-width: 625px) {
+    .project {
+        height:1700px;
+    }
+    .project .big-box {
+        gap: 10px;
+        margin-top: 900px;
+    }
+}
+
 
 
 @media screen and (max-width:480px) {
     html {
         scroll-behavior: smooth;
     }
+    .title {
+        font-size: 15px;
+    }
     .header-atas {
         gap: 100px;
         height: 70px;
     }
     .header-left {
-        margin-top: 14px;
+        margin-top: 16px;
     }
     .header-left h1 {
         font-size: 25px;
@@ -196,8 +325,6 @@
         flex-direction: column;
         backdrop-filter: blur(20px);
         background-color: rgba(0, 0, 0, 0.423);
-        margin-top: 53px;
-        margin-left: -10px;
         position: fixed;
         height: 240px;
         width: 200px;
@@ -251,9 +378,7 @@
         height: 230px;
         margin-top: 100px;
     }
-    .about .title {
-        font-size: 15px;
-    }
+    
     .about .text {
         font-size: 12px;
         width: 80%;
@@ -265,57 +390,27 @@
     .skill {
         height: 950px;
     }
-    .skill .title-1 {
-        font-size: 15px;
-    }
 
     /* section project */
 
     .project{
-        height: 1900px;
+        height: 1700px;
     }
-    .project .title-1 {
-        font-size: 16px;
-    }
-    .projeect .big-box {
+
+    .project .big-box {
         gap: 10px;
+        margin-top: 900px;
     }
     .project .box {
         margin: 0px 0px 0px 0px;
     }
 
-    /* section services */
-    .services .title-3 {
-        font-size: 25px;
-        padding-bottom: 40px;
-    }
-    .services .serv-content .card2 {
-        margin-bottom: 20px;
-        width: 120px;
-        height: 280px;
-    }
-    .serv-content {
-        justify-content: center;
-        gap: 7px;
-        margin: 20px 15px 20px 15px;
-    }
-    .serv-content:hover {
-        margin: 20px 15px 20px 15px;
-    }
-    .services .serv-content .card2 .text {
-        font-size: 16px;
-    }
-    .serv-content .card2 .kalimat {
-        font-size: 13px;
-    }
     /* section contact */
     
     .contact {
         height: 1150px;
     }
-    .contact .title-2 {
-        font-size: 15px;
-    }
+    
     .contact-contact {
         display: flex;
         justify-content: center;
