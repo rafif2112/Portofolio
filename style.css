@@ -269,6 +269,7 @@ header {
     width: 300px;
     border-radius: 15px;
     /* margin: 30px 20px 0 20px; */
+    transition: all 0.3s;
 }
 .project .box:hover {
     background-color: #434749;
@@ -346,9 +347,22 @@ header {
     transition: all 0.3s;
 }
 
+.isi-kotak {
+    transition: all 0.3s;
+}
+
+.isi-kotak:hover{
+    scale: 1.1;
+    transition: all 0.3s;
+}
+
 .kotak i {
     font-size: 40px;
     padding: 20px;
+}
+
+.kotak .isi-kotak p {
+    font-size: 13px;
 }
 
 /* section contact */
