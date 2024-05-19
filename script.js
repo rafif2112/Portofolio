@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function() {
         ];
         for (let element of textElements) {
             element.style.color = textColor;
-            element.style.fontWeight = "600";
         }
     }
 
