@@ -66,6 +66,9 @@
     .contact .subjek {
         width: 650px;
     }
+    .contact .subject {
+        width: 655px;
+    }
     .contact .footer .wrapper .icon {
         margin: 0 10px;
     }
@@ -176,6 +179,9 @@
     }
     .contact .subjek {
         width: 530px;
+    }
+    .contact .subject {
+        width: 535px;
     }
     .contact .footer .wrapper .icon {
         margin: 0 10px;
@@ -321,6 +327,9 @@
     .contact .subjek {
         width: 420px;
     }
+    .contact .subject {
+        width: 425px;   
+    }
     .contact .footer .wrapper .icon {
         margin: 0 10px;
     }
@@ -369,6 +378,9 @@
     }
     .contact .subjek {
         width: 350px;
+    }
+    .contact .subject {
+        width: 355px;
     }
 }
 
@@ -497,6 +509,9 @@
     .contact .subjek {
         width: 300px;
     }
+    .contact .subject {
+        width: 305px;   
+    }
     .contact .footer .wrapper .icon {
         margin: 0 10px;
     }
@@ -563,6 +578,9 @@
     }
     .contact .subjek {
         width: 270px;
+    }
+    .contact .subject {
+        width: 275px;   
     }
     .contact .footer .wrapper .icon {
         margin: 0 10px;

@@ -435,7 +435,17 @@ header {
     width: 300px;
     padding-left: 10px;
 }
-.contact .subjek {
+.contact .subject {
+    background: rgb(47, 45, 45);
+    color: white;
+    border: 1px solid rgb(43, 43, 42);
+    border-radius: 15px;
+    height: 50px;
+    width: 615px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.contact .subjek{
     border: 1px solid rgb(43, 43, 42);
     background: rgb(47, 45, 45);
     color: white;
