@@ -1,169 +1,165 @@
-const contactForm = document.getElementById('contact-form');
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById('contact-form');
+    const menuIcon = document.querySelector('.menu-btn');
+    const menuList = document.getElementById("menu-list");
+    const toggleButton = document.getElementById('toggleButton');
+    let menuOpen = false;
 
-contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    // Contact Form Submission
+    contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    const url = e.target.action;
-    const formData = new FormData(contactForm);
+        const url = e.target.action;
+        const formData = new FormData(contactForm);
 
-    fetch(url, {
-        method: "POST",
-        body: formData,
-        mode: "no-cors",
-    })
+        fetch(url, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors",
+        })
         .then(() => {
             window.location.href = "index.html";
         })
-        .catch((e) => alert("Tidak Dapat Mengirim pesan, Periksa koneksi inernet anda!"));
-});
+        .catch(() => {
+            alert("Tidak Dapat Mengirim pesan, Periksa koneksi internet anda!");
+        });
+    });
 
-// menu hamburgers
-
-const menuIcon = document.getElementById("menu-icon");
-const menuList = document.getElementById("menu-list");
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.querySelector('.menu-btn');
-    // const menu = document.querySelector('.menu');
-    let menuOpen = false;
-
+    // Menu Hamburger Toggle
     menuIcon.addEventListener('click', function() {
         if (!menuOpen) {
-            // menu.style.display = 'block';
             menuIcon.innerHTML = '<i class="fas fa-times"></i>';
-            menuOpen = true;
         } else {
-            // menu.style.display = 'none';
             menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
-            menuOpen = false;
         }
+        menuOpen = !menuOpen;
+        menuList.classList.toggle("hidden");
+        updateULBackground(menuOpen);
     });
-});
 
-menuIcon.addEventListener("click", () => {
-    menuList.classList.toggle("hidden");
-});
-
-
-$(document).ready(function(){
-    $(window).scroll(function(){
-        // sticky navbar on scroll script
-        if(this.scrollY > 50){
+    // Sticky Navbar and Scroll-up Button
+    $(window).scroll(function() {
+        const scrollY = this.scrollY;
+        if (scrollY > 50) {
             $('.header-atas').addClass("sticky");
-        }else{
+        } else {
             $('.header-atas').removeClass("sticky");
         }
-        
-        // scroll-up button show/hide script
-        if(this.scrollY > 500){
+
+        if (scrollY > 500) {
             $('.scroll-up-btn').addClass("show");
-        }else{
+        } else {
             $('.scroll-up-btn').removeClass("show");
         }
     });
-    // slide-up script
-    $('.scroll-up-btn').click(function(){
+
+    // Scroll-up Button Click
+    $('.scroll-up-btn').click(function() {
         $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
-    var typed = new Typed(".typing", {
+
+    // Typing Animation
+    new Typed(".typing", {
         strings: ["Web Developer", "Photographer", "Designer"],
         typeSpeed: 80,
         backSpeed: 60,
         loop: true
     });
+
+    // Dark & Light Mode Toggle
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+        const isDarkMode = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        toggleButton.innerHTML = isDarkMode ? 
+            '<i class="fas fa-moon" style="color: black;"></i>' : 
+            '<i class="fas fa-sun" style="color: yellow;"></i>';
+        toggleButton.classList.toggle('light-mode', !isDarkMode);
+        menuIcon.style.color = isDarkMode ? 'black' : 'white';
+
+        updateLinkColors(isDarkMode);
+        updateBoxColors(isDarkMode);
+        updateTextColors(isDarkMode);
+        updateULBackground(menuOpen); // Update UL background based on current state
+    }
+
+    function updateLinkColors(isDarkMode) {
+        const links = document.getElementsByTagName("a");
+        const color = isDarkMode ? "black" : "";
+        for (let link of links) {
+            link.style.color = color;
+            if (isDarkMode) link.style.fontWeight = "500";
+        }
+    }
+
+    function updateBoxColors(isDarkMode) {
+        const boxes = document.querySelectorAll(".kotak");
+        const color = isDarkMode ? "#ffa500" : ""; // Default in dark mode, light blue in light mode
+        const form = document.querySelectorAll(".nama, .imel, .subjek");
+        const warna = isDarkMode ? "#ffd382" : "";
+        const card = document.querySelectorAll(".card");
+        const bg = isDarkMode ? "#ffd382" : "";
+        boxes.forEach(box => {
+            box.style.backgroundColor = color;
+            box.style.color = isDarkMode ? "black" : "white";
+        });
+
+        form.forEach(form => {
+            form.style.backgroundColor = warna;
+            form.style.color = isDarkMode ? "black" : "white";
+        });
+
+        card.forEach(card => {
+            card.style.backgroundColor = bg;
+        });
+    }
+
+    function updateTextColors(isDarkMode) {
+        const textColor = isDarkMode ? "black" : "";
+        const textElements = [
+            document.getElementsByClassName("text-1")[0],
+            document.getElementsByClassName("text-3")[0],
+            document.getElementsByClassName("text")[0]
+        ];
+        for (let element of textElements) {
+            element.style.color = textColor;
+            element.style.fontWeight = "600";
+        }
+    }
+
+    function updateULBackground(menuOpen) {
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        const ulElements = document.getElementsByTagName("ul");
+        const backgroundColor = (menuOpen && isDarkMode) ? "rgba(255, 255, 255, 0.7)" : (menuOpen ? "rgba(0, 0, 0, 0.423)" : "");
+        for (let ul of ulElements) {
+            ul.style.backgroundColor = backgroundColor;
+        }
+    }
+
+    function loadTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            toggleButton.innerHTML = '<i class="fas fa-moon" style="color: black;"></i>';
+            toggleButton.classList.remove('light-mode');
+            menuIcon.style.color = 'black';
+            updateLinkColors(true);
+            updateBoxColors(true);
+            updateTextColors(true);
+            updateULBackground(menuOpen); // Update UL background based on current state
+        } else {
+            toggleButton.innerHTML = '<i class="fas fa-sun" style="color: yellow;"></i>';
+            toggleButton.classList.add('light-mode');
+            menuIcon.style.color = 'white';
+            updateLinkColors(false);
+            updateBoxColors(false);
+            updateTextColors(false);
+            updateULBackground(menuOpen); // Update UL background based on current state
+        }
+    }
+
+    loadTheme();
+    toggleButton.addEventListener('click', toggleDarkMode);
 });
-
-
-// dark & light mode toggle
-
-function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-
-    // Save the current mode to localStorage
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        document.getElementById('toggleButton').innerHTML = '<i class="fas fa-moon" style="color: black;"></i>';
-        document.getElementById('toggleButton').classList.remove('light-mode');
-        
-        // Mengambil semua elemen <a> di dalam dokumen
-        var links = document.getElementsByTagName("a");
-
-        // Mengakses setiap elemen <a> satu per satu
-        for(var i = 0; i < links.length; i++) {
-            // Lakukan sesuatu dengan setiap elemen <a>, misalnya:
-            links[i].style.color = "black";
-            links[i].style.fontWeight = "500";
-        }
-
-        var kotak = document.getElementsByClassName("kotak");
-
-        for(var k = 0; k < kotak.length; k++) {
-            kotak[k].style.color = "white";
-        }
-
-        document.getElementsByClassName("text-1")[0].style.color = "black";
-        document.getElementsByClassName("text-3")[0].style.color = "black";
-        document.getElementsByClassName("text")[0].style.color = "black";
-
-    } else {
-        localStorage.setItem('theme', 'light');
-        document.getElementById('toggleButton').innerHTML = '<i class="fas fa-sun" style="color: yellow;"></i>';
-        document.getElementById('toggleButton').classList.add('light-mode');
-        
-        // Mengambil semua elemen <a> di dalam dokumen
-        var links = document.getElementsByTagName("a");
-
-        // Mengakses setiap elemen <a> satu per satu
-        for(var i = 0; i < links.length; i++) {
-            // Lakukan sesuatu dengan setiap elemen <a>, misalnya:
-            links[i].style.color = "white";
-        }
-
-        var kotak = document.getElementsByClassName("kotak");
-
-        for(var k = 0; k < kotak.length; k++) {
-            kotak[k].style.color = "white";
-        }
-
-        document.getElementsByClassName("text-1")[0].style.color = "white";
-        document.getElementsByClassName("text-3")[0].style.color = "white";
-        document.getElementsByClassName("text")[0].style.color = "white";
-    }
-}
-
-// Function to load the saved mode from localStorage
-function loadTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme && savedTheme == 'dark') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('toggleButton').innerHTML = '<i class="fas fa-moon" style="color: black;"></i>';
-        document.getElementById('toggleButton').classList.remove('light-mode'); 
-        var links = document.getElementsByTagName("a");
-
-        for(var i = 0; i < links.length; i++) {
-            links[i].style.color = "black";
-            links[i].style.fontWeight = "500";
-        }
-
-        var kotak = document.getElementsByClassName("kotak");
-
-        for(var k = 0; k < kotak.length; k++) {
-            kotak[k].style.color = "white";
-        }
-
-        document.getElementsByClassName("text-1")[0].style.color = "black";
-        document.getElementsByClassName("text-3")[0].style.color = "black";
-        document.getElementsByClassName("text")[0].style.color = "black";
-    }
-}
-
-loadTheme();
-// =============================================================== //
-
-// Event listener for the toggle button
-document.getElementById('toggleButton').addEventListener('click', toggleDarkMode);
-
-// Load the theme on page load

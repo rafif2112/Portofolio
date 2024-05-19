@@ -52,7 +52,7 @@
     /* section contact */
     
     .contact {
-        height: 1150px;
+        height: 1000px;
     }
     .contact-sepuh {
         margin-left: 40px;
@@ -105,7 +105,7 @@
     .navbar ul {
         flex-direction: column;
         backdrop-filter: blur(20px);
-        background-color: rgba(0, 0, 0, 0.423);
+        /* background-color: rgba(255, 255, 255, 0.3); */
         margin-top: 62px;
         margin-left: -10px;
         position: fixed;
@@ -159,7 +159,7 @@
     /* section contact */
     
     .contact {
-        height: 1150px;
+        height: 900px;
     }
     .contact-sepuh {
         margin-left: 40px;
@@ -212,7 +212,7 @@
     .navbar ul {
         flex-direction: column;
         backdrop-filter: blur(20px);
-        background-color: rgba(0, 0, 0, 0.423);
+        /* background-color: rgba(0, 0, 0, 0.423); */
         margin-top: 62px;
         margin-left: -10px;
         position: fixed;
@@ -301,7 +301,7 @@
     /* section contact */
     
     .contact {
-        height: 1150px;
+        height: 800px;
     }
     .contact-sepuh {
         margin-left: 40px;
@@ -381,7 +381,7 @@
     .navbar ul {
         flex-direction: column;
         backdrop-filter: blur(20px);
-        background-color: rgba(0, 0, 0, 0.423);
+        /* background-color: rgba(0, 0, 0, 0.423); */
         position: fixed;
         margin-top: 53px;
         margin-left: -20px;
@@ -467,7 +467,7 @@
     /* section contact */
     
     .contact {
-        height: 1150px;
+        height: 1050px;
     }
     
     .contact-contact {
@@ -509,7 +509,7 @@
 
 @media screen and (max-width: 390px) {
     .header-atas {
-        gap: 40px;
+        gap: 30px;
     }
     
     .navbar ul {
@@ -533,6 +533,12 @@
     }
     .contact-content {
         margin-left: -30px;
+    }
+    .contact .nama, .imel {
+        width: 130px;
+    }
+    .contact .subjek {
+        width: 270px;
     }
     .contact .footer .wrapper .icon {
         margin: 0 10px;
