@@ -44,7 +44,7 @@ body {
     align-items: center;
 }
 .apa{
-    background-color: #ffd382;
+    background-color: #ffdd00;
 }
 /* header */
 
@@ -70,6 +70,7 @@ header {
 }
 .header-left {
     margin-top: 17px;
+    color: yellow;
 }
 .navbar {
     margin-top: 17px;
@@ -89,7 +90,6 @@ header {
 }
 .header-left h1 {
     margin-top: 6px;
-    color: yellow;
 }
 /* menu btn styling */
 .menu-btn {
@@ -170,7 +170,7 @@ header {
     font-weight: 600;
     font-family: Courier, monospace;
 }
-.home .left .text-2 span{
+.home .left .text-2 .span{
     color: yellow;
 }
 .home .left a {

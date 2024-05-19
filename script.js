@@ -96,11 +96,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateBoxColors(isDarkMode) {
         const boxes = document.querySelectorAll(".kotak");
-        const color = isDarkMode ? "#ffa500" : ""; // Default in dark mode, light blue in light mode
+        const color = isDarkMode ? "#d7d7d7" : ""; // Default in dark mode, light blue in light mode
         const form = document.querySelectorAll(".nama, .imel, .subjek");
-        const warna = isDarkMode ? "#ffd382" : "";
+        const warna = isDarkMode ? "#d7d7d7" : "";
         const card = document.querySelectorAll(".card");
-        const bg = isDarkMode ? "#ffd382" : "";
+        const bg = isDarkMode ? "#d7d7d7" : "";
         boxes.forEach(box => {
             box.style.backgroundColor = color;
             box.style.color = isDarkMode ? "black" : "white";
@@ -118,13 +118,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateTextColors(isDarkMode) {
         const textColor = isDarkMode ? "black" : "";
+        const color = isDarkMode ? "yellow" : "";
         const textElements = [
             document.getElementsByClassName("text-1")[0],
             document.getElementsByClassName("text-3")[0],
-            document.getElementsByClassName("text")[0]
         ];
         for (let element of textElements) {
             element.style.color = textColor;
+            element.style.fontWeight = "600";
+        }
+        const text = document.getElementsByClassName("text");
+        for (let t of text) {
+            t.style.color = textColor;
+        }
+
+        const title = document.querySelectorAll(".header-left, .span");
+        for (let t of title) {
+            t.style.color = color;
+            t.style.webkitTextStroke = "1px #ffdd00";
         }
     }
 

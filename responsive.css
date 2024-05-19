@@ -102,19 +102,22 @@
         display: none;
         flex-direction: column;
     }
+    .btn-toggle-mode i {
+        margin-left: -150px;
+    }
     .navbar ul {
         flex-direction: column;
         backdrop-filter: blur(20px);
-        /* background-color: rgba(255, 255, 255, 0.3); */
         margin-top: 62px;
-        margin-left: -10px;
+        margin-left: -50px;
+        gap: 25px;
         position: fixed;
-        height: 240px;
-        width: 200px;
+        height: 340px;
+        width: 300px;
         border-radius: 0 0 15px 15px;
     }
     .navbar ul li a {
-        font-size: 17px;
+        font-size: 23px;
     }
     .menu-btn{
         display: flex;
@@ -122,6 +125,7 @@
         color: #ffffff;
         font-size: 30px;
         cursor: pointer;
+        margin-left: 100px;
     }
     .menu-btn:hover {
         transition: all 0.3s;
@@ -195,7 +199,7 @@
         font-size: 15px;
     }
     .header-atas {
-        gap: 50px;
+        gap: 20px;
         height: 80px;
     }
     .header-left {
@@ -209,19 +213,21 @@
         display: none;
         flex-direction: column;
     }
+    .btn-toggle-mode i {
+        margin-left: -120px;
+    }
     .navbar ul {
         flex-direction: column;
         backdrop-filter: blur(20px);
-        /* background-color: rgba(0, 0, 0, 0.423); */
         margin-top: 62px;
-        margin-left: -10px;
+        margin-left: -50px;
         position: fixed;
-        height: 240px;
-        width: 200px;
+        height: 340px;
+        width: 300px;
         border-radius: 0 0 15px 15px;
     }
     .navbar ul li a {
-        font-size: 17px;
+        font-size: 22px;
     }
     .menu-btn{
         display: flex;
@@ -333,6 +339,9 @@
 }
 
 @media screen and (max-width: 625px) {
+    .btn-toggle-mode i{
+        font-size: 25px;
+    }
     .project {
         height:1700px;
     }
@@ -343,9 +352,13 @@
 }
 
 @media screen and (max-width: 570px) {
+
     .header-atas {
-        gap: 50px;
+        gap: 10px;
         height: 80px;
+    }
+    .btn-toggle-mode i{
+        margin-left: -90px;
     }
     .header-left h1 {
         font-size: 30px;
@@ -364,8 +377,11 @@
         font-size: 15px;
     }
     .header-atas {
-        gap: 40px;
+        gap: 20px;
         height: 70px;
+    }
+    .btn-toggle-mode i{
+        margin-left: -100px;
     }
     .header-left {
         margin-top: 14px;
@@ -381,16 +397,14 @@
     .navbar ul {
         flex-direction: column;
         backdrop-filter: blur(20px);
-        /* background-color: rgba(0, 0, 0, 0.423); */
         position: fixed;
         margin-top: 53px;
-        margin-left: -20px;
-        height: 240px;
-        width: 200px;
+        margin-left: -60px;
+        height: 300px;
         border-radius: 0 0 15px 15px;
     }
     .navbar ul li a {
-        font-size: 17px;
+        font-size: 19px;
     }
     .menu-btn{
         display: flex;
@@ -398,9 +412,6 @@
         color: #ffffff;
         font-size: 25px;
         cursor: pointer;
-    }
-    .menu-btn:hover {
-        transition: all 0.3s;
     }
 
     /* section home */
@@ -509,11 +520,24 @@
 
 @media screen and (max-width: 390px) {
     .header-atas {
-        gap: 30px;
+        gap: 0px;
     }
-    
+    .btn-toggle-mode i{
+        margin-left: -80px;
+    }
+    .header-left {
+        margin-top: 14px;
+    }
+    .header-left h1 {
+        font-size: 25px;
+        margin-right: 50px;
+    }
+    .navbar .hidden {
+        display: none;
+        flex-direction: column;
+    }
     .navbar ul {
-        margin-left: -30px;
+        margin-left: -70px;
     }
     .services .serv-content .card2 {
         width: 100px;
