@@ -1,11 +1,11 @@
 html {
-    background: rgb(27, 23, 23);
     scroll-behavior: smooth;
+    color: white;
 }
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     list-style: none;
-    color: white;
+    /* color: white; */
 }
 
 a {
@@ -14,7 +14,34 @@ a {
 
 body {
     background: rgb(27, 23, 23);
+    color: white;
+    
 }
+.gelombang {
+    margin-top: -200px;
+}
+
+/* Default Light Mode */
+.dark-mode {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.btn-toggle-mode i {
+    font-size: 30px;
+    transition: all 0.4s;
+}
+
+.btn-toggle-mode i:hover {
+    transform: rotate(60deg);
+    transition: all 0.4s;
+}
+
+.btn-toggle-mode {
+    display: flex;
+    align-items: center;
+}
+
 
 /* header */
 
@@ -30,7 +57,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 100px;
     z-index: 1000;
     transition: all 0.4s;
 }
@@ -41,7 +68,7 @@ header {
 .header-left {
     margin-top: 17px;
 }
-.navbar{
+.navbar {
     margin-top: 17px;
 }
 .navbar ul {
@@ -368,7 +395,7 @@ header {
 /* section contact */
 
 .contact {
-    height: 800px;
+    height: 750px;
 }
 
 .contact-contact {

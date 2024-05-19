@@ -2,7 +2,7 @@
     .home .right img {
         margin-top: 140px;
         margin-right: -150px;
-        width: 400px;
+        width: 350px;
     }
     .home .left {
         margin-top: 200px;
@@ -22,11 +22,15 @@
         font-size: 20px;
     }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 950px) {
+    .header-atas {
+        gap: 50px;
+    }
+
     .home .right img {
         margin-top: 170px;
         margin-right: -130px;
-        width: 350px;
+        width: 280px;
     }
     .home .left {
         margin-top: 200px;
@@ -80,6 +84,48 @@
 }
 
 @media screen and (max-width: 768px) {
+    .title {
+        font-size: 15px;
+    }
+    .header-atas {
+        gap: 50px;
+        height: 80px;
+    }
+    .header-left {
+        margin-top: 14px;
+    }
+    .header-left h1 {
+        font-size: 30px;
+        margin-right: 200px;
+    }
+    .navbar .hidden {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar ul {
+        flex-direction: column;
+        backdrop-filter: blur(20px);
+        background-color: rgba(0, 0, 0, 0.423);
+        margin-top: 62px;
+        margin-left: -10px;
+        position: fixed;
+        height: 240px;
+        width: 200px;
+        border-radius: 0 0 15px 15px;
+    }
+    .navbar ul li a {
+        font-size: 17px;
+    }
+    .menu-btn{
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .menu-btn:hover {
+        transition: all 0.3s;
+    }
     /* section home */
     .home{
         justify-content: center;
@@ -144,15 +190,12 @@
     }
 }
 
-@media screen and (max-width: 670px) {
-    html {
-        scroll-behavior: smooth;
-    }
+@media screen and (max-width: 680px) {
     .title {
         font-size: 15px;
     }
     .header-atas {
-        gap: 120px;
+        gap: 50px;
         height: 80px;
     }
     .header-left {
@@ -160,6 +203,7 @@
     }
     .header-left h1 {
         font-size: 30px;
+        margin-right: 200px;
     }
     .navbar .hidden {
         display: none;
@@ -266,10 +310,10 @@
         display: block;
     }
     .contact .nama, .imel {
-        width: 170px;
+        width: 205px;
     }
     .contact .subjek {
-        width: 350px;
+        width: 420px;
     }
     .contact .footer .wrapper .icon {
         margin: 0 10px;
@@ -298,24 +342,37 @@
     }
 }
 
-
+@media screen and (max-width: 570px) {
+    .header-atas {
+        gap: 50px;
+        height: 80px;
+    }
+    .header-left h1 {
+        font-size: 30px;
+        margin-right: 100px;
+    }
+    .contact .nama, .imel {
+        width: 170px;
+    }
+    .contact .subjek {
+        width: 350px;
+    }
+}
 
 @media screen and (max-width:480px) {
-    html {
-        scroll-behavior: smooth;
-    }
     .title {
         font-size: 15px;
     }
     .header-atas {
-        gap: 100px;
+        gap: 40px;
         height: 70px;
     }
     .header-left {
-        margin-top: 16px;
+        margin-top: 14px;
     }
     .header-left h1 {
         font-size: 25px;
+        margin-right: 50px;
     }
     .navbar .hidden {
         display: none;
@@ -326,6 +383,8 @@
         backdrop-filter: blur(20px);
         background-color: rgba(0, 0, 0, 0.423);
         position: fixed;
+        margin-top: 53px;
+        margin-left: -20px;
         height: 240px;
         width: 200px;
         border-radius: 0 0 15px 15px;
@@ -450,7 +509,7 @@
 
 @media screen and (max-width: 390px) {
     .header-atas {
-        gap: 70px;
+        gap: 40px;
     }
     
     .navbar ul {
