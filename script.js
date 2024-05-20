@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateBoxColors(isDarkMode) {
         const boxes = document.querySelectorAll(".kotak");
         const color = isDarkMode ? "#d7d7d7" : ""; // Default in dark mode, light blue in light mode
-        const form = document.querySelectorAll(".nama, .imel, .subjek");
+        const form = document.querySelectorAll(".nama, .imel, .subjek, .subject");
         const warna = isDarkMode ? "#d7d7d7" : "";
         const card = document.querySelectorAll(".card");
         const bg = isDarkMode ? "#d7d7d7" : "";
